@@ -1,0 +1,79 @@
+/*-- scss:defaults --*/
+
+$primary-color: #0c2344;
+
+/* 1. 로컬 폰트 파일 정의 (파일 이름 정확히 일치) */
+
+@font-face {
+  font-family: 'AritaDotum';
+  src: url('AritaDotumKR-Thin.ttf') format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'AritaDotum';
+  src: url('AritaDotumKR-Light.ttf') format('truetype');
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'AritaDotum';
+  src: url('AritaDotumKR-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'AritaDotum';
+  src: url('AritaDotumKR-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'AritaDotum';
+  src: url('AritaDotumKR-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/* 2. Revealjs 슬라이드 전체에 적용 */
+
+.reveal {
+  /* 기본 본문 폰트 설정 */
+  font-family: 'AritaDotum', sans-serif !important;
+  font-weight: 300; /* 기본 본문은 Light 두께 사용 */
+
+  /* 제목 설정 (h1 ~ h6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'AritaDotum', sans-serif !important;
+    font-weight: 600; /* 제목은 SemiBold로 설정 (너무 두꺼우면 700으로 변경) */
+    text-transform: none; /* 영문 대문자 강제 변환 방지 */
+  }
+
+  /* 강조 텍스트 */
+  strong, b {
+    font-weight: 700; /* 굵은 글씨는 Bold 사용 */
+  }
+}
+
+/* 메트로폴리스 테마의 특수 요소(블록 제목 등) 대응 */
+.reveal .slides section {
+  font-family: 'AritaDotum', sans-serif;
+}
+
+/* 3. Metropolis 테마 전용 스타일 보정 (선택 사항) */
+.reveal .alert {
+  font-weight: 600;
+}
+
+.reveal .example {
+  font-weight: 500;
+}
+
+/* 첫 장(타이틀 슬라이드)의 메인 제목 크기 조절 */
+.reveal .title-slide h1.title {
+  font-size: 2em !important; /* 숫자를 조절하여 원하는 크기로 맞추세요 */
+}
+
+/* (선택) 타이틀 슬라이드의 부제목 크기도 조절하고 싶다면 */
+.reveal .title-slide .subtitle {
+  font-size: 1.2em !important; 
+}
